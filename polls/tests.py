@@ -21,10 +21,7 @@ class TestPoll(APITestCase):
     @staticmethod
     def setup_user():
         User = get_user_model()
-        return User.objects.create_user(
-            'test',
-            email='testuser@test.com',
-            password='test'
+        return User.objects.create_user( 'test', email='testuser@test.com', password='test'
         )
 
     def test_list(self):
